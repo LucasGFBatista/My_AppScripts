@@ -19,8 +19,8 @@ Este projeto é um sistema automatizado para envio de e-mails de candidaturas de
 
        | Vaga                      | Email                     | Tipo Vaga | Status   | Data/hora envio    | Data envio |
        |---------------------------|---------------------------|-----------|----------|--------------------|------------|
-       | Desenvolvedor Web         | exemplo@gmail.com         | DEV       | pendente | 2024-11-04 13:33   | 2024-11-04 |
-       | Assistente Administrativo | outroexemplo@gmail.com    | ADM       | enviado  | 2024-11-04 13:33   | 2024-11-04 |
+       | Desenvolvedor Web         | <exemplo@gmail.com>         | DEV       | pendente | 2024-11-04 13:33   | 2024-11-04 |
+       | Assistente Administrativo | <outroexemplo@gmail.com>    | ADM       | enviado  | 2024-11-04 13:33   | 2024-11-04 |
 
    - **Planilha de Currículos ("Curriculos")**:
      - Associa cada tipo de vaga ao link do currículo correspondente.
@@ -72,11 +72,14 @@ A organização dos arquivos do projeto segue a estrutura:
 
 1. **Clone o projeto**: Baixe o repositório para sua máquina local.
 2. **Instale o Google Clasp**: Certifique-se de que possui o [Google Clasp](https://github.com/google/clasp) instalado para gerenciar scripts do Google Apps.
+
    ```bash
    npm install -g @google/clasp
    ```
+
 3. **Autentique o Clasp**: Execute `clasp login` para autenticar o Clasp com sua conta Google.
 4. **Sincronize o projeto**: Use o comando abaixo para sincronizar os arquivos com o Google Apps Script.
+
    ```bash
    clasp push
    ```
