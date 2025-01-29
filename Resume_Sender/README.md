@@ -6,7 +6,7 @@ Este projeto é um sistema automatizado para envio de e-mails de candidaturas de
 ## Funcionalidades
 
 - **Envio Automático de E-mails**: Envio de e-mails baseado nos dados de candidaturas cadastrados na planilha.
-- **Filtragem Condicional**: E-mails são enviados somente em dias úteis e dentro de um horário comercial predefinido.
+- **Filtragem Condicional**: E-mails são enviados somente em dias úteis, dentro de um horário comercial predefinido e se houver limite disponível de envio. ,(Limite 100/dia)
 - **Controle de Status**: Atualização automática do status para "Enviado" após o envio, evitando duplicações.
 - **Notificação via AppSheet**: Notificações automáticas são geradas no AppSheet quando o status de uma candidatura é alterado para "Enviado".
 
