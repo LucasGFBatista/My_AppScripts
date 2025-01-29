@@ -102,6 +102,7 @@ A organização dos arquivos do projeto segue a estrutura:
 - **`checkAndSendEmails.js`**: Verifica se as condições de envio são atendidas (dia útil, horário comercial e não ser feriado).
 - **`isHoliday.js`**: Função para verificar se o dia atual é feriado.
 - **`createTrigger.js`**: Cria gatilhos para execução automática, garantindo o início do processo em eventos específicos.
+- **`quota.js`**: Verifica o limite de envio é maior que 0, retorna booleano. 
 
 ## Templates de E-mail
 
