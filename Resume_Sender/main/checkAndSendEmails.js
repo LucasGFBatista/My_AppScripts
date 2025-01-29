@@ -13,12 +13,16 @@ function checkAndSendEmails() {
 
   Logger.log("isWorkDay: " + isWorkDay + "\nisIntoTheTime: " + isIntoTheTime);
 
+  // Verifica se tem quota
+
+  const quota = hasQuota();
+
   // Verifica se é feriado
   const holiday = isHoliday();
   Logger.log("Holiday: " + holiday);
 
-  // Se for dia útil, dentro do horário e não for feriado, envia os e-mails
-  if (isWorkDay && isIntoTheTime && !holiday) {
+  // Se for dia útil, dentro do horário, não for feriado e tiver cota para enviar, irá enviar os emails
+  if (isWorkDay && isIntoTheTime && !holiday && quota) {
     Logger.log("Condições atendidas, enviando emails.");
 
     const sheetManager = new SheetManager("Main");

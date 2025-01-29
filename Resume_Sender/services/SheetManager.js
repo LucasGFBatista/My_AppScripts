@@ -26,6 +26,7 @@ class SheetManager {
 
   updateStatus(row, status) {
     this.sheet.getRange(row + 1, 4).setValue(status);
-    this.sheet.getRange(row + 1, 5).setValue(new Date());
+    this.sheet.getRange(row + 1, 5).setValue(dateFormatHour());
+    this.sheet.getRange(row + 1, 6).setValue(dateFormat());
   }
 }

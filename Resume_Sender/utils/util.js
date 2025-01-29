@@ -11,11 +11,16 @@ function dateFormat() {
   return Utilities.formatDate(currentDate, Session.getScriptTimeZone(), 'yyyy-MM-dd');
 }
 
+
+
+
 //Estilo corpo de email
+
 
 function styleBody() {
   return `style="font-family: Arial, sans-serif; color:#333;"`;
 }
+
 
 function styleDiv() {
   return `style="max-width: 600px; margin: auto; border: 1px solid #ddd; padding: 20px;"`;
