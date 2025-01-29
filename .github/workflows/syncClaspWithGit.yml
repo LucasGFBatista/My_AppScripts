@@ -1,0 +1,34 @@
+name: Sync CLASP with Git
+
+on:
+  push:
+    branches:
+      - master  # Ou a branch que você usa
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  clasp-sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Log in to CLASP
+        run: clasp login --no-localhost
+
+      - name: Push changes to Google Apps Script
+        run: clasp push
+
+      - name: Pull changes from Google Apps Script
+        run: clasp pull
