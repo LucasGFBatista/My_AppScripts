@@ -25,7 +25,7 @@ jobs:
         run: npm install
 
       - name: Log in to CLASP
-        run: clasp login --no-localhost
+        run: clasp login --token ${{ secrets.CLASP_OAUTH_TOKEN }}
 
       - name: Push changes to Google Apps Script
         run: clasp push
